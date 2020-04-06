@@ -21,10 +21,10 @@
     --main-color-4: #FF756B;
     --main-color-5: #F85C50;
 
-    --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
-    --shadow-light: 0 2rem 6rem rgba(0,0,0,.9);
+    --shadow-light: #{0 2rem 6rem rgba(0, 0, 0, 0.1)};
+    --shadow-dark: #{0 2rem 6rem rgba(0, 0, 0, 0.3)};
+    --shadow-superdark: #{0 2rem 6rem rgba(0, 0, 0, 0.9)};
 }
-
 
 * {
     margin: 0;

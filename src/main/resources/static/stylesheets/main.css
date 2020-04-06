@@ -13,8 +13,9 @@
   --main-color-3: #FE9E76;
   --main-color-4: #FF756B;
   --main-color-5: #F85C50;
+  --shadow-light: 0 2rem 6rem rgba(0, 0, 0, 0.1);
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  --shadow-light: 0 2rem 6rem rgba(0, 0, 0, 0.9);
+  --shadow-superdark: 0 2rem 6rem rgba(0, 0, 0, 0.9);
 }
 
 * {
@@ -42,6 +43,34 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--shadow-dark);
+  min-height: 50rem;
+}
+
+.header {
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--color-grey-light-2);
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+  flex: 0 0 18%;
+}
+
+.coffeehouse-view {
+  background-color: orangered;
+  flex: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
