@@ -1,0 +1,114 @@
+//// LOGO /////
+
+.logo {
+  height: 5.25rem;
+  margin-left: 3rem;
+}
+
+//// SEARCH /////
+
+.search {
+  flex: 0 0 45%;
+  display: flex;
+
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var(--color-grey-light-2);
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 100px;
+    width: 75%;
+    transition: all .2s;
+    margin-right: -3.25rem;
+
+
+    &:focus {
+      outline: none;
+      width: 90%;
+      background-color: var(--color-grey-light-3);
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-dark-3);
+    }
+  }
+
+  &__input:focus + &__button {
+    background-color: var(--color-grey-light-3);
+  }
+
+  &__button {
+    border: none;
+    background-color: var(--color-grey-light-2);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+}
+
+
+//// USER NAVIGATION /////
+
+.user-nav {
+  align-self: stretch;
+
+  display: flex;
+  align-items: center;
+
+  & > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  & > *:hover {
+    background-color: var(--color-grey-light-2);
+  }
+
+  &__icon-box {
+    position: relative;
+  }
+
+  &__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+
+  }
+}
+
+
+// Icon colors //
+
+.filter-twitter{
+  filter: invert(52%) sepia(88%) saturate(2457%) hue-rotate(176deg) brightness(100%) contrast(91%);
+}
+
+.filter-facebook{
+  filter: invert(31%) sepia(10%) saturate(3359%) hue-rotate(183deg) brightness(101%) contrast(88%);
+}
+
+.filter-linkedin{
+  filter: invert(33%) sepia(86%) saturate(569%) hue-rotate(157deg) brightness(98%) contrast(97%);
+}
+
+.filter-gmail{
+  filter: invert(35%) sepia(49%) saturate(2159%) hue-rotate(337deg) brightness(87%) contrast(89%);
+}
+
+.filter-tripadvisor{
+  filter: invert(66%) sepia(57%) saturate(7076%) hue-rotate(138deg) brightness(96%) contrast(101%);
+}
+
+.filter-search {
+  filter: invert(58%) sepia(53%) saturate(437%) hue-rotate(329deg) brightness(110%) contrast(99%);
+}
