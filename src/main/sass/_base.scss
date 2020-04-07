@@ -9,22 +9,44 @@
     --color-grey-light-2: #E6E7E8;
     --color-grey-light-3: #F1F2F2;
 
-    // Orange 
+    // Orange
     --color-orange-1: #DF8600;
     --color-orange-2: #F39629;
     --color-orange-3: #FFC46B;
 
-    // Peach 
+    // Peach
     --main-color-1: #FBE7B5;
     --main-color-2: #FBCEB5;
     --main-color-3: #FE9E76;
     --main-color-4: #FF756B;
     --main-color-5: #F85C50;
 
+    // Brown
+    --color-brown-1: #8b5a2b;
+    --color-brown-2: #8b4513;
+    --color-brown-3: #7d3e11;
+    --color-brown-4: #6f370f;
+    --color-brown-5: #96572a;
+    --color-brown-6: #a26a42;
+    --color-brown-7: #ffa54f;
+    --color-brown-8: #a0522d;
+    --color-brown-9: #b98f71;
+
+
     --shadow-light: #{0 2rem 6rem rgba(0, 0, 0, 0.1)};
     --shadow-dark: #{0 2rem 6rem rgba(0, 0, 0, 0.3)};
     --shadow-superdark: #{0 2rem 6rem rgba(0, 0, 0, 0.9)};
+
+    // Gradients
+    // 50 shades of grey
+    --color-50sog-1: #bdc3c7;
+    --color-50sog-2: #2c3e50;
+
+    // Sunset
+    --color-sunset-1: #0b486b;
+    --color-sunset-2: #f56217;
 }
+
 
 * {
     margin: 0;
@@ -48,8 +70,10 @@ body {
     font-weight: 400;
     line-height: 1.6;
     color: var(--color-grey-dark-2);
-    background-image: linear-gradient(to right bottom, 
-    var(--main-color-3), var(--main-color-5));
+    // background-image: linear-gradient(to bottom,
+    // var(--color-brown-7), var(--color-brown-3));
+    background-image: linear-gradient(to bottom,
+            var(--color-sunset-2), var(--color-sunset-1));
     background-size: cover;
     background-repeat: no-repeat;
 

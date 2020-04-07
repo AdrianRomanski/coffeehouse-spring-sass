@@ -6,21 +6,22 @@
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
         <link rel="stylesheet" href="/stylesheets/main.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <link rel="shortcut icon" type="image/png" href="img/logo/favicon.png">
 
-        <title>Coffee Paradise &mdash; Your heaven on earth</title>
+        <title>Coffee Paradise &mdash; Time for a break</title>
     </head>
     <body>
-
     <div class="container">
         <header class="header">
-            <img src="img/logo.png" alt="Coffeehouse logo" class="logo">
+            <img src="img/logo/logo-cut.jpg" alt="Coffehouse logo" class="logo">
+
             <form action="#" class="search">
                 <input type="text" class="search__input" placeholder="Search products">
                 <button class="search__button">
                     <img src="img/svg/icons/search.svg" alt="search__icon" class="search__icon filter-search">
                 </button>
             </form>
+
             <div class="user-nav">
                 <div class="user-nav__icon-box">
                     <a href="#" class=""><img src="img/svg/brands/tripadvisor.svg" alt="nav__icon" class="user-nav__icon filter-tripadvisor"></a>
@@ -37,14 +38,70 @@
                 <div class="user-nav__icon-box">
                     <a href="#" class=""><img src="img/svg/brands/linkedin.svg" alt="nav__icon" class="user-nav__icon filter-linkedin"></a>
                 </div>
+
+
+
             </div>
+
         </header>
         <div class="content">
             <nav class="sidebar">
-                Navigation
+                <ul class="side-nav">
+                    <li class="side-nav__item side-nav__item--active">
+                        <a href="#" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-info":></use>
+                            </svg>
+                            <span>Informations</span>
+                        </a>
+                    </li>
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-mug":></use>
+                            </svg>
+                            <span>Coffeas</span>
+                        </a>
+                    </li>
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-spoon-knife":></use>
+                            </svg>
+                            <span>Food</span>
+                        </a>
+                    </li>
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-glass":></use>
+                            </svg>
+                            <span>Wines</span>
+                        </a>
+                    </li>
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-books":></use>
+                            </svg>
+                            <span>Books</span>
+                        </a>
+                    </li>
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-location":></use>
+                            </svg>
+                            <span>Location</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="legal">
+                    &copy; 2020 by Coffehouse. All rights reserved
+                </div>
             </nav>
             <main class="coffeehouse-view">
-                Coffeehouse view
+                Coffehouse view
             </main>
         </div>
     </div>

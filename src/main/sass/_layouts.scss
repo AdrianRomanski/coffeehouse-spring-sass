@@ -23,12 +23,17 @@
 }
 
 .sidebar {
-  background-color: var(--color-grey-dark-1);
+  background-image: linear-gradient(to bottom,
+          var(--color-50sog-1), var(--color-50sog-2));
 
   flex: 0 0 18%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .coffeehouse-view {
-  background-color: orangered;
+  height: 80rem;
   flex: 1;
 }
