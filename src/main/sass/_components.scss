@@ -160,6 +160,38 @@
 
 }
 
+
+/////////////////
+// Gallery
+
+
+
+.gallery {
+  display: flex;
+
+  &__photo {
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+}
+
+
+.overview {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--color-sunset-1);
+
+  &__heading__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-sunset-2);
+  }
+}
+
+
+
 // Icon colors //
 
 .filter-twitter{

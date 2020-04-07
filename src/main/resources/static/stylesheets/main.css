@@ -89,7 +89,7 @@ body {
 }
 
 .coffeehouse-view {
-  height: 80rem;
+  height: 75rem;
   flex: 1;
 }
 
@@ -212,6 +212,27 @@ body {
   font-size: 1.2rem;
   text-align: center;
   padding: 2.5rem;
+}
+
+.gallery {
+  display: flex;
+}
+.gallery__photo {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.overview {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--color-sunset-1);
+}
+.overview__heading__icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: var(--color-sunset-2);
 }
 
 .filter-twitter {
