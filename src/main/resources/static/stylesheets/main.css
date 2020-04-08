@@ -89,7 +89,7 @@ body {
 }
 
 .coffeehouse-view {
-  height: 75rem;
+  height: 77rem;
   flex: 1;
 }
 
@@ -332,6 +332,58 @@ body {
   color: var(--color-primary);
   font-size: 2.2rem;
   font-weight: 500;
+}
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+}
+.cta__book-now {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  background-image: linear-gradient(to right, var(--color-sunset-1), var(--color-sunset-2));
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.btn > * {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  transition: all .4s;
+}
+.btn__visible {
+  padding: 2rem 7.5rem;
+}
+.btn__invisible {
+  position: absolute;
+  padding: 2rem 0;
+  left: 0;
+  top: -100%;
+}
+.btn:hover {
+  background-image: linear-gradient(to left, var(--color-sunset-1), var(--color-sunset-2));
+}
+.btn:hover .btn__visible {
+  transform: translateY(100%);
+}
+.btn:hover .btn__invisible {
+  top: 0;
+}
+.btn:focus {
+  outline: none;
+  animation: pulsate 1s infinite;
 }
 
 .filter-twitter {
