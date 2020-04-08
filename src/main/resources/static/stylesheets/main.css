@@ -93,6 +93,15 @@ body {
   flex: 1;
 }
 
+.details {
+  display: flex;
+  justify-content: space-around;
+}
+
+.description {
+  flex: 1;
+}
+
 .logo {
   height: 7rem;
   margin-left: 3rem;
@@ -232,6 +241,46 @@ body {
 .overview__heading__icon {
   width: 1.75rem;
   height: 1.75rem;
+  fill: var(--color-sunset-2);
+}
+
+.paragraph {
+  margin-bottom: 2rem;
+  margin-right: 5.5rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-sunset-1);
+}
+
+.list {
+  list-style: none;
+}
+
+.description {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 1rem;
+}
+.description__item {
+  position: relative;
+  color: var(--color-sunset-1);
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  padding: 1rem 1rem;
+  position: relative;
+  font-weight: 500;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+.description__item:not(:last-child) {
+  margin-bottom: .5rem;
+}
+.description__icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-right: 2rem;
   fill: var(--color-sunset-2);
 }
 
