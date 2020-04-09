@@ -10,4 +10,8 @@ class CoffeehouseApplicationTests {
     void contextLoads() {
     }
 
+    @Test
+    public void main() {
+        CoffeehouseApplication.main(new String[] {});
+    }
 }
