@@ -6,7 +6,6 @@ import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public class ReservationDTO extends BaseEntityDTO {
 
     private LocalDate dateOfReservation;
