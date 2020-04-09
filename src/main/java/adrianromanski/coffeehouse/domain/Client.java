@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.Email;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @EqualsAndHashCode(exclude = {"reservations"})
@@ -25,6 +26,6 @@ public class Client  extends Person {
     private String telephoneNumber;
 
     @OneToMany(mappedBy = "client", cascade = CascadeType.PERSIST)
-    private List<Reservation> reservations;
+    private List<Reservation> reservations = new ArrayList<>();
 
 }
