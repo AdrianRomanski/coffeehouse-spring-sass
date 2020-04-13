@@ -13,4 +13,5 @@ public class ClientDTO extends PersonDTO {
     private String email;
     private String telephoneNumber;
     private List<ReservationDTO> reservationsDTO = new ArrayList<>();
+    private List<ReviewDTO> reviewsDTO = new ArrayList<>();
 }

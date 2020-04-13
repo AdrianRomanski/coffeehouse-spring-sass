@@ -24,4 +24,7 @@ public class Client  extends Person {
     @OneToMany(mappedBy = "client", cascade = CascadeType.PERSIST)
     private List<Reservation> reservations = new ArrayList<>();
 
+    @OneToMany(mappedBy = "client", cascade = CascadeType.PERSIST)
+    private List<Review> reviews = new ArrayList<>();
+
 }
