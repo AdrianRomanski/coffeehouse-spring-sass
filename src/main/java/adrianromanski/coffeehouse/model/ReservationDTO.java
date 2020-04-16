@@ -1,5 +1,6 @@
 package adrianromanski.coffeehouse.model;
 
+import adrianromanski.coffeehouse.model.person.ClientDTO;
 import lombok.*;
 
 import java.time.LocalDate;

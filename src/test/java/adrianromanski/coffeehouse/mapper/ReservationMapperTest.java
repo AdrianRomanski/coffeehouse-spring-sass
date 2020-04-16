@@ -1,8 +1,8 @@
 package adrianromanski.coffeehouse.mapper;
 
-import adrianromanski.coffeehouse.domain.Client;
+import adrianromanski.coffeehouse.domain.person.Client;
 import adrianromanski.coffeehouse.domain.Reservation;
-import adrianromanski.coffeehouse.model.ClientDTO;
+import adrianromanski.coffeehouse.model.person.ClientDTO;
 import adrianromanski.coffeehouse.model.ReservationDTO;
 import org.junit.jupiter.api.Test;
 

@@ -1,5 +1,8 @@
-package adrianromanski.coffeehouse.domain;
+package adrianromanski.coffeehouse.domain.person;
 
+import adrianromanski.coffeehouse.domain.Reservation;
+import adrianromanski.coffeehouse.domain.Review;
+import adrianromanski.coffeehouse.domain.person.Person;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

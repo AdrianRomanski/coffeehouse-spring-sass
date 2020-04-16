@@ -1,8 +1,8 @@
 package adrianromanski.coffeehouse.domain;
 
+import adrianromanski.coffeehouse.domain.person.Client;
 import adrianromanski.coffeehouse.model.BaseEntityDTO;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;

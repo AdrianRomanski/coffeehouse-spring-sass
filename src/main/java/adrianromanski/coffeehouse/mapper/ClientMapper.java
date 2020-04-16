@@ -1,8 +1,8 @@
 package adrianromanski.coffeehouse.mapper;
 
 
-import adrianromanski.coffeehouse.domain.Client;
-import adrianromanski.coffeehouse.model.ClientDTO;
+import adrianromanski.coffeehouse.domain.person.Client;
+import adrianromanski.coffeehouse.model.person.ClientDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;

@@ -1,5 +1,7 @@
-package adrianromanski.coffeehouse.model;
+package adrianromanski.coffeehouse.model.person;
 
+import adrianromanski.coffeehouse.model.ReservationDTO;
+import adrianromanski.coffeehouse.model.ReviewDTO;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

@@ -1,7 +1,7 @@
 package adrianromanski.coffeehouse.domain;
 
+import adrianromanski.coffeehouse.domain.person.Client;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
