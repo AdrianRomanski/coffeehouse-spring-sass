@@ -1,7 +1,5 @@
 package adrianromanski.coffeehouse.domain.drink.enums;
 
-import java.util.HashMap;
-import java.util.Map;
 
 public enum CoffeeSize{
     ESPRESSO("50ml", 1.00),
@@ -13,22 +11,12 @@ public enum CoffeeSize{
     private final String amount;
     private final Double basePrice;
 
-    private static final Map<String, CoffeeSize> sizes = new HashMap<>();
-
     CoffeeSize(String amount, Double basePrice) {
         this.amount = amount;
         this.basePrice = basePrice;
     }
 
-    static {
-        for(CoffeeSize c : CoffeeSize.values()) {
-            sizes.put(c.name(), c);
-        }
+    public Double getBasePrice() {
+        return basePrice;
     }
-
-    public static Map<String, CoffeeSize> getSizes() {
-        return sizes;
-    }
-
-
 }
