@@ -15,12 +15,13 @@ class CoffeeMapperTest {
     public static final Double PRICE = BEAST.getBasePrice();
     public static final long ID = 1L;
     public static final String NAME = "Beast Espresso Caramel";
+    public static final String SIZE = "Big";
     CoffeeMapper coffeeMapper = CoffeeMapper.INSTANCE;
 
     @Test
     void coffeeToCoffeeDTO() {
         Coffee coffee = new Coffee();
-        coffee.setCoffeeSize(BEAST);
+        coffee.setSize(SIZE);
         coffee.setTakeAway(true);
         coffee.setFinalPrice(PRICE);
         coffee.setId(ID);
@@ -29,7 +30,7 @@ class CoffeeMapperTest {
 
         CoffeeDTO coffeeDTO = coffeeMapper.coffeeToCoffeeDTO(coffee);
 
-        assertEquals(coffeeDTO.getCoffeeSize(), BEAST);
+        assertEquals(coffeeDTO.getSize(), SIZE);
         assertEquals(coffeeDTO.getFinalPrice(), PRICE);
         assertEquals(coffeeDTO.getName(), NAME);
         assertEquals(coffeeDTO.getTemperature(), HOT);
@@ -41,7 +42,7 @@ class CoffeeMapperTest {
     @Test
     void coffeeDTOToCoffee() {
         CoffeeDTO coffeeDTO = new CoffeeDTO();
-        coffeeDTO.setCoffeeSize(BEAST);
+        coffeeDTO.setSize(SIZE);
         coffeeDTO.setTakeAway(true);
         coffeeDTO.setFinalPrice(PRICE);
         coffeeDTO.setId(ID);
@@ -51,7 +52,7 @@ class CoffeeMapperTest {
 
         Coffee coffee = coffeeMapper.coffeeDTOToCoffee(coffeeDTO);
 
-        assertEquals(coffee.getCoffeeSize(), BEAST);
+        assertEquals(coffee.getSize(), SIZE);
         assertEquals(coffee.getFinalPrice(), PRICE);
         assertEquals(coffee.getName(), NAME);
         assertEquals(coffee.getTemperature(), HOT);

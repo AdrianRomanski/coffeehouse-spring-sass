@@ -27,6 +27,7 @@ class CoffeeControllerTest {
 
     MockMvc mockMvc;
 
+
     @BeforeEach
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
@@ -38,7 +39,7 @@ class CoffeeControllerTest {
 
     @Test
     void index() throws Exception {
-
+        // Given
         List<Coffee> coffees = Arrays.asList(new Coffee(), new Coffee(), new Coffee());
 
         when(coffeeRepository.findAll()).thenReturn(coffees);

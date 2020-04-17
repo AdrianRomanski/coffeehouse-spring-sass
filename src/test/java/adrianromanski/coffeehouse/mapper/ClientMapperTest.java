@@ -2,10 +2,10 @@ package adrianromanski.coffeehouse.mapper;
 
 import adrianromanski.coffeehouse.domain.person.Client;
 import adrianromanski.coffeehouse.domain.Reservation;
-import adrianromanski.coffeehouse.domain.Review;
+import adrianromanski.coffeehouse.domain.opinion.Review;
 import adrianromanski.coffeehouse.model.person.ClientDTO;
 import adrianromanski.coffeehouse.model.ReservationDTO;
-import adrianromanski.coffeehouse.model.ReviewDTO;
+import adrianromanski.coffeehouse.model.opinion.ReviewDTO;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

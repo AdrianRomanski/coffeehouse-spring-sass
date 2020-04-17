@@ -15,6 +15,7 @@ import javax.persistence.MappedSuperclass;
 public class Drink extends BaseEntity {
 
     private String name;
+    private String size;
     private Double finalPrice;
     private Temperature temperature;
 }

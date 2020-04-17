@@ -1,7 +1,7 @@
 package adrianromanski.coffeehouse.mapper;
 
-import adrianromanski.coffeehouse.domain.Review;
-import adrianromanski.coffeehouse.model.ReviewDTO;
+import adrianromanski.coffeehouse.domain.opinion.Review;
+import adrianromanski.coffeehouse.model.opinion.ReviewDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
