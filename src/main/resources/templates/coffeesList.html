@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="layouts/layout :: layout(~{::title}, ~{::main})">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/main.css">
-    <link rel="shortcut icon" type="image/png" href="img/logo/favicon.png">
-
     <title>Coffee Paradise &mdash; Coffees</title>
 </head>
 
 <body>
-<!--/*@thymesVar id="coffeeList" type="java.util.List<adrianromanski.coffeehouse.domain.drink.Coffee>"*/-->
-<h1>Coffees</h1>
-<div th:remove="all">Coffee 1</div>
-<div th:remove="all">Coffee 2</div>
-<div th:each="coffee : ${coffeeList}">
-    <b>Name: </b><span th:text="${coffee.name}">Coffee name</span>
+<div class="container">
+    <div class="content">
+        <main class="coffeehouse-view">
+            <!--/*@thymesVar id="coffeeList" type="java.util.List<adrianromanski.coffeehouse.domain.drink.Coffee>"*/-->
+            <h1>Coffees</h1>
+            <div th:remove="all">Coffee 1</div>
+            <div th:remove="all">Coffee 2</div>
+            <div th:each="coffee : ${coffeeList}">
+                <b>Name: </b><span th:text="${coffee.name}">Coffee name</span>
+            </div>
+        </main>
+    </div>
 </div>
 </body>
 

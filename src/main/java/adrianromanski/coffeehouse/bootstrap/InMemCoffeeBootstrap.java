@@ -1,6 +1,6 @@
 package adrianromanski.coffeehouse.bootstrap;
 
-import adrianromanski.coffeehouse.config.CoffeehouseProfile;
+import adrianromanski.coffeehouse.config.AppProfiles;
 import adrianromanski.coffeehouse.domain.drink.Coffee;
 import adrianromanski.coffeehouse.repositories.CoffeeRepository;
 import lombok.RequiredArgsConstructor;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @RequiredArgsConstructor
 @Component
-@Profile(CoffeehouseProfile.H2)
+@Profile(AppProfiles.DEV)
 @Slf4j
 public class InMemCoffeeBootstrap implements CommandLineRunner {
 
