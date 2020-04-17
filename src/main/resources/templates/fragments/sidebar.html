@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <body>
 
 <nav class="sidebar" th:fragment="sidebar">
     <ul class="side-nav">
         <li class="side-nav__item side-nav__item--active">
-            <a href="#" class="side-nav__link">
+            <a th:href="@{/}" class="side-nav__link">
                 <svg class="side-nav__icon">
                     <use xlink:href="img/sprite.svg#icon-info":></use>
                 </svg>
