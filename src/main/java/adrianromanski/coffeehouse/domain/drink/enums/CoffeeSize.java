@@ -1,6 +1,9 @@
 package adrianromanski.coffeehouse.domain.drink.enums;
 
 
+/**
+ * We can use this class for custom Coffee Creation later or either load the data from DB
+ */
 public enum CoffeeSize{
     ESPRESSO("50ml", 1.00),
     REGULAR("180ml", 2.15),

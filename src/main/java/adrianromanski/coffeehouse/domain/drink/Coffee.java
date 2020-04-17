@@ -11,7 +11,6 @@ import javax.persistence.Entity;
 @NoArgsConstructor
 public class Coffee extends Drink {
 
-    private CoffeeSize coffeeSize;
     private boolean takeAway;
 
 }

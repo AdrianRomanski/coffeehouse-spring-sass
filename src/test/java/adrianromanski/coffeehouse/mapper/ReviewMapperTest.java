@@ -1,9 +1,9 @@
 package adrianromanski.coffeehouse.mapper;
 
 import adrianromanski.coffeehouse.domain.person.Client;
-import adrianromanski.coffeehouse.domain.Review;
+import adrianromanski.coffeehouse.domain.opinion.Review;
 import adrianromanski.coffeehouse.model.person.ClientDTO;
-import adrianromanski.coffeehouse.model.ReviewDTO;
+import adrianromanski.coffeehouse.model.opinion.ReviewDTO;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -21,6 +21,7 @@ class ReviewMapperTest {
     public static final Long ID = 1L;
     public static final String CONTENT = "Perfect place for perfect people";
     public static final int RATING = 4;
+    public static final String NAME = "Champions League Final";
 
     ReviewMapper reviewMapper = ReviewMapper.INSTANCE;
 
@@ -32,6 +33,7 @@ class ReviewMapperTest {
         review.setRating(RATING);
         review.setContent(CONTENT);
         review.setDate(DATE_OF_REVIEW);
+        review.setName(NAME);
 
 
         Client client = new Client();
@@ -50,6 +52,7 @@ class ReviewMapperTest {
         assertEquals(reviewDTO.getRating(), RATING);
         assertEquals(reviewDTO.getDate(), DATE_OF_REVIEW);
         assertEquals(reviewDTO.getContent(), CONTENT);
+        assertEquals(reviewDTO.getName(), NAME);
 
         // Checking client
         assertEquals(reviewDTO.getClientDTO().getFirstName(), FIRST_NAME);
@@ -66,6 +69,7 @@ class ReviewMapperTest {
         reviewDTO.setRating(RATING);
         reviewDTO.setContent(CONTENT);
         reviewDTO.setDate(DATE_OF_REVIEW);
+        reviewDTO.setName(NAME);
 
 
         ClientDTO clientDTO = new ClientDTO();
@@ -84,6 +88,7 @@ class ReviewMapperTest {
         assertEquals(review.getRating(), RATING);
         assertEquals(review.getDate(), DATE_OF_REVIEW);
         assertEquals(review.getContent(), CONTENT);
+        assertEquals(review.getName(), NAME);
 
         // Checking client
         assertEquals(review.getClient().getFirstName(), FIRST_NAME);

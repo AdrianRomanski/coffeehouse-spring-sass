@@ -1,26 +1,27 @@
-package adrianromanski.coffeehouse.model;
+package adrianromanski.coffeehouse.domain.opinion;
 
-import adrianromanski.coffeehouse.model.person.ClientDTO;
+import adrianromanski.coffeehouse.domain.person.Client;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
-import java.time.LocalDate;
 
+/**
+ *  We will store this one in MongoDB later
+ */
+@Entity
 @NoArgsConstructor
 @Data
-public class ReviewDTO extends BaseEntityDTO {
-
-    private LocalDate date;
+public class Review extends Opinion {
 
     @ManyToOne
-    private ClientDTO clientDTO;
-
-    private String content;
+    private Client client;
 
     @Min(0)
     @Max(5)
     private Integer rating;
+
 }
