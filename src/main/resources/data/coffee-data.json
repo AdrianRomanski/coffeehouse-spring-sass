@@ -1,0 +1,34 @@
+[
+  {
+    "description" : "One of our top sellers and newest flavorful blends.  Great for your Espresso Machine.",
+    "name" : "Psycho Espresso Blend"
+  },
+  {
+    "description" : "This signature coffee is truly the best medium roast blend on the market. What do you think of when you hear the term 'Crafter's Blend' Here at Mugshot Coffee Roasters, we have developed a blend combining different roasts, varietals, and roasting methods which impact the final product. Crafter's Blend is truly an effort to bring the best of the world's beans together for the perfect cup of coffee. Being rich, smooth, and balanced, Mugshot Coffee Roasters 'Crafter's Blend' will renew your faith in coffee.",
+    "name" : "Crafter's Blend"
+  },
+  {
+    "description" : "caramelized brown sugar, chocolate and raisin.",
+    "name" : "Guatemala Los Capulines"
+  },
+  {
+    "description" : "notes of cherry, chocolate and brown sugar.",
+    "name" : "Ethiopia Sidamo 4 Natural Oromia"
+  },
+  {
+    "description" : "papaya, orange and grape.",
+    "name" : "Colombia Tolima"
+  },
+  {
+    "description" : "notes of honey dew, caramel, sweet & clean.",
+    "name" : "Ethiopia Yirgacheffe G2"
+  },
+  {
+    "description" : "lemon zest, cane sugar & milk chocolate.",
+    "name" : "Mexico Oaxaca Cepco Altura"
+  },
+  {
+    "description" : "chocolate, tropical fruit, clean, floral, lemon, lively, full body.",
+    "name" : "Kenya AB Plus"
+  }
+]

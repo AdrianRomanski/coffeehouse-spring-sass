@@ -10,17 +10,48 @@
         <main class="coffeehouse-view">
             <div class="gallery">
                 <figure class="gallery__item">
-                    <img th:src="@{/img/banner/Coffee1-banner.jpg}" class="gallery__photo"/>
+                    <img th:src="@{/img/banner/Coffee1-banner.jpg}" class="gallery__photo" style="object-fit: cover; height: 200px;"/>
                 </figure>
             </div>
 
-            <!--/*@thymesVar id="coffeeList" type="java.util.List<adrianromanski.coffeehouse.domain.drink.Coffee>"*/-->
+            <!--/*@thymesVar id="coffeeList" type="java.util.List<adrianromanski.coffeehouse.domain.drink.Coffee2>"*/-->
             <h1>Coffees</h1>
-            <div th:remove="all">Coffee 1</div>
-            <div th:remove="all">Coffee 2</div>
-            <div th:each="coffee : ${coffeeList}">
-                <b>Name: </b><span th:text="${coffee.name}">Coffee name</span>
+            <div>
+                <h2>Psycho Espresso Blend</h2>
+                <blockquote>One of our top sellers and newest flavorful blends.  Great for your Espresso Machine.</blockquote>
             </div>
+            <div>
+                <h2>Crafter's Blend</h2>
+                <blockquote>This signature coffee is truly the best medium roast blend on the market. What do you think of when you hear the term 'Crafter's Blend' Here at Mugshot Coffee Roasters, we have developed a blend combining different roasts, varietals, and roasting methods which impact the final product. Crafter's Blend is truly an effort to bring the best of the world's beans together for the perfect cup of coffee. Being rich, smooth, and balanced, Mugshot Coffee Roasters‚ 'Crafter's Blend' will renew your faith in coffee.</blockquote>
+            </div>
+            <div>
+                <h2>Guatemala Los Capulines</h2>
+                <blockquote>caramelized brown sugar, chocolate and raisin.</blockquote>
+            </div>
+            <div>
+                <h2>Ethiopia Sidamo 4 Natural Oromia</h2>
+                <blockquote>notes of cherry, chocolate and brown sugar.</blockquote>
+            </div>
+            <div>
+                <h2>Colombia Tolima</h2>
+                <blockquote>papaya, orange and grape.</blockquote>
+            </div>
+            <div>
+                <h2>Ethiopia Yirgacheffe G2</h2>
+                <blockquote>notes of honey dew, caramel, sweet & clean.</blockquote>
+            </div>
+            <div>
+                <h2>Mexico Oaxaca Cepco Altura</h2>
+                <blockquote>lemon zest, cane sugar & milk chocolate.</blockquote>
+            </div>
+            <div>
+                <h2>Kenya AB Plus</h2>
+                <blockquote>chocolate, tropical fruit, clean, floral, lemon, lively, full body.</blockquote>
+            </div>
+
+<!--            <div th:each="coffee : ${coffeeList}">-->
+<!--                <b>Name: </b><span th:text="${coffee.name}">Coffee name</span>-->
+<!--            </div>-->
         </main>
     </div>
 </div>
