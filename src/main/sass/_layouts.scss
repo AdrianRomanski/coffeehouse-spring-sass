@@ -1,6 +1,15 @@
+@mixin margin-x($width) {
+  margin: {
+    left: $width;
+    right: $width;
+  }
+  margin: auto;
+}
+
 .container {
+  @include margin-x(8rem);
+  //margin: 8rem auto;
   max-width: 120rem;
-  margin: 8rem auto;
   background-color: var(--color-grey-light-2);
   box-shadow: var(--shadow-dark);
 
