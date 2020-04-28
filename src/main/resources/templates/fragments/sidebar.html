@@ -2,52 +2,66 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <body>
 
-<nav class="sidebar" th:fragment="sidebar">
-    <ul class="side-nav">
-        <li class="side-nav__item side-nav__item--active">
-            <a th:href="@{/}" class="side-nav__link">
+<nav class="sidebar" th:fragment="sidebar (menu)">
+    <span hidden>
+        <li th:fragment="sidebarAnchor (path, active, icon, text)"
+            th:class="${'side-nav\_\_item ' + (menu==active ? 'side-nav\_\_item--active' : '')}">
+            <a th:href="@{__${path}__}" class="side-nav__link">
                 <svg class="side-nav__icon">
-                    <use xlink:href="img/sprite.svg#icon-info":></use>
+                    <use th:xlink:href="${'img/sprite.svg#' + icon}"></use>
                 </svg>
-                <span>Information's</span>
+                <span th:text="${text}">Menu Item</span>
             </a>
         </li>
-        <li class="side-nav__item">
+    </span>
+
+    <ul class="side-nav">
+
+        <li class="side-nav__item" th:replace="::sidebarAnchor ('/', 'home', 'icon-info', 'Information')">
+            <a>
+                <svg class="side-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-info" :></use>
+                </svg>
+                <span>Information</span>
+            </a>
+        </li>
+
+        <li class="side-nav__item" th:replace="::sidebarAnchor ('/coffees2', 'coffees', 'icon-mug', 'Coffees')">
             <a th:href="@{/coffees2}" class="side-nav__link">
                 <svg class="side-nav__icon">
-                    <use xlink:href="img/sprite.svg#icon-mug":></use>
+                    <use xlink:href="img/sprite.svg#icon-mug" :></use>
                 </svg>
                 <span>Coffees</span>
             </a>
         </li>
-        <li class="side-nav__item">
+        <li class="side-nav__item" th:replace="::sidebarAnchor ('#', 'food', 'icon-spoon-knife', 'Food')">
             <a href="#" class="side-nav__link">
                 <svg class="side-nav__icon">
-                    <use xlink:href="img/sprite.svg#icon-spoon-knife":></use>
+                    <use xlink:href="img/sprite.svg#icon-spoon-knife" :></use>
                 </svg>
                 <span>Food</span>
             </a>
         </li>
-        <li class="side-nav__item">
+        <li class="side-nav__item" th:replace="::sidebarAnchor ('#', 'wines', 'icon-glass', 'Wines')">
             <a href="#" class="side-nav__link">
                 <svg class="side-nav__icon">
-                    <use xlink:href="img/sprite.svg#icon-glass":></use>
+                    <use xlink:href="img/sprite.svg#icon-glass" :></use>
                 </svg>
                 <span>Wines</span>
             </a>
         </li>
-        <li class="side-nav__item">
+        <li class="side-nav__item" th:replace="::sidebarAnchor ('#', 'books', 'icon-books', 'Books')">
             <a href="#" class="side-nav__link">
                 <svg class="side-nav__icon">
-                    <use xlink:href="img/sprite.svg#icon-books":></use>
+                    <use xlink:href="img/sprite.svg#icon-books" :></use>
                 </svg>
                 <span>Books</span>
             </a>
         </li>
-        <li class="side-nav__item">
+        <li class="side-nav__item" th:replace="::sidebarAnchor ('#', 'location', 'icon-location', 'Location')">
             <a href="#" class="side-nav__link">
                 <svg class="side-nav__icon">
-                    <use xlink:href="img/sprite.svg#icon-location":></use>
+                    <use xlink:href="img/sprite.svg#icon-location" :></use>
                 </svg>
                 <span>Location</span>
             </a>

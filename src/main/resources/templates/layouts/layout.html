@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(title, content)">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(title, content, menu)">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
     <header th:replace="fragments/header :: header"></header>
 
     <div class="content">
-        <nav th:replace="fragments/sidebar :: sidebar">
+        <nav th:replace="fragments/sidebar :: sidebar (${menu})">
             Navbar here
         </nav>
 
