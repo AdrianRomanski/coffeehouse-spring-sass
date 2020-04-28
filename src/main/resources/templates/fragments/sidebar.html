@@ -26,14 +26,15 @@
             </a>
         </li>
 
-        <li class="side-nav__item" th:replace="::sidebarAnchor ('/coffees2', 'coffees', 'icon-mug', 'Coffees')">
-            <a th:href="@{/coffees2}" class="side-nav__link">
+        <li class="side-nav__item" th:replace="::sidebarAnchor ('/coffees', 'coffees', 'icon-mug', 'Coffees')">
+            <a href="/coffees" class="side-nav__link">
                 <svg class="side-nav__icon">
                     <use xlink:href="img/sprite.svg#icon-mug" :></use>
                 </svg>
                 <span>Coffees</span>
             </a>
         </li>
+
         <li class="side-nav__item" th:replace="::sidebarAnchor ('#', 'food', 'icon-spoon-knife', 'Food')">
             <a href="#" class="side-nav__link">
                 <svg class="side-nav__icon">
@@ -42,6 +43,7 @@
                 <span>Food</span>
             </a>
         </li>
+
         <li class="side-nav__item" th:replace="::sidebarAnchor ('#', 'wines', 'icon-glass', 'Wines')">
             <a href="#" class="side-nav__link">
                 <svg class="side-nav__icon">
@@ -50,6 +52,7 @@
                 <span>Wines</span>
             </a>
         </li>
+
         <li class="side-nav__item" th:replace="::sidebarAnchor ('#', 'books', 'icon-books', 'Books')">
             <a href="#" class="side-nav__link">
                 <svg class="side-nav__icon">
@@ -58,6 +61,7 @@
                 <span>Books</span>
             </a>
         </li>
+
         <li class="side-nav__item" th:replace="::sidebarAnchor ('#', 'location', 'icon-location', 'Location')">
             <a href="#" class="side-nav__link">
                 <svg class="side-nav__icon">
@@ -66,6 +70,7 @@
                 <span>Location</span>
             </a>
         </li>
+
     </ul>
     <div class="legal">
         &copy; 2020 by Coffeehouse. All rights reserved

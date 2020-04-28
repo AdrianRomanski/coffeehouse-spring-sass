@@ -1,7 +1,7 @@
 package adrianromanski.coffeehouse.controllers;
 
-import adrianromanski.coffeehouse.domain.drink.Coffee2;
-import adrianromanski.coffeehouse.repositories.Coffee2Repository;
+import adrianromanski.coffeehouse.domain.drink.Coffee;
+import adrianromanski.coffeehouse.repositories.CoffeeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/coffees2")
 public class Coffee2Controller {
 
-    private final Coffee2Repository coffee2Repository;
+    private final CoffeeRepository coffeeRepository;
 
     @GetMapping
     public String listCoffees(Model model) {
-        Iterable<Coffee2> coffees2 = coffee2Repository.findAll();
+        Iterable<Coffee> coffees2 = coffeeRepository.findAll();
         model.addAttribute("coffeeList", coffees2);
-        return "coffees2List";
+        return "coffeeList";
     }
 
 }

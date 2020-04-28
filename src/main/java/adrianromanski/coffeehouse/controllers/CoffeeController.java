@@ -16,7 +16,7 @@ public class CoffeeController {
     @RequestMapping({"", "/"})
     public String index(Model model) {
         model.addAttribute("coffeeList", coffeeRepository.findAll());
-        return "coffeesList";
+        return "coffeeList";
     }
 
 }
