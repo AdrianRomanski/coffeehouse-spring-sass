@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="layouts/layout :: layout(~{::title}, ~{::main}, 'coffees')">
+<head>
+    <title>Coffee Paradise &mdash; Coffees</title>
+</head>
+
+<body>
+<div class="container">
+    <div class="content">
+        <main class="coffeehouse-view">
+            <div class="gallery">
+                <figure class="gallery__item">
+                    <img th:src="@{/img/banner/Coffee1-banner.jpg}" class="gallery__photo"
+                         style="object-fit: cover; height: 200px;"/>
+                </figure>
+            </div>
+
+            <!--/*@thymesVar id="coffeeList" type="java.util.List<adrianromanski.coffeehouse.model.drink.CoffeeDTO>"*/-->
+            <div class="coffee__list">
+                <h1 class="coffee__title">Coffees</h1>
+                <div th:each="coffee : ${coffeeList}" class="coffee">
+                    <h2 class="coffee__name"
+                        th:text="${coffee.name}">Psycho Espresso Blend</h2>
+                    <blockquote class="coffee__description"
+                                th:text="${coffee.description}"
+                    >One of our top sellers and newest flavorful blends. Great for your Espresso Machine.
+                    </blockquote>
+                </div>
+                <div th:remove="all">
+                    <h2>Crafter's Blend</h2>
+                    <blockquote>This signature coffee is truly the best medium roast blend on the market. What do you
+                        think of when you hear the term 'Crafter's Blend' Here at Mugshot Coffee Roasters, we have
+                        developed a blend combining different roasts, varietals, and roasting methods which impact the
+                        final product. Crafter's Blend is truly an effort to bring the best of the world's beans
+                        together for the perfect cup of coffee. Being rich, smooth, and balanced, Mugshot Coffee
+                        Roasters‚ 'Crafter's Blend' will renew your faith in coffee.
+                    </blockquote>
+                </div>
+                <div th:remove="all">
+                    <h2>Guatemala Los Capulines</h2>
+                    <blockquote>caramelized brown sugar, chocolate and raisin.</blockquote>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</div>
+</body>
+
+</html>

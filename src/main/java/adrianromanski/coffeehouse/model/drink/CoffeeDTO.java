@@ -1,11 +1,13 @@
 package adrianromanski.coffeehouse.model.drink;
 
+import adrianromanski.coffeehouse.model.BaseEntityDTO;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class CoffeeDTO extends DrinkDTO {
+public class CoffeeDTO extends BaseEntityDTO {
 
-    private boolean takeAway;
+    private String name;
+    private String description;
 }

@@ -1,0 +1,29 @@
+@mixin pad-x($pad-size) {
+  padding-left: $pad-size;
+  padding-right: $pad-size;
+}
+
+@mixin header {
+  color: var(--color-sunset-1);
+  text-transform: uppercase;
+}
+
+.coffee {
+  margin-bottom: 20px;
+
+  &__list {
+    @include pad-x(3em);
+  }
+
+  &__title {
+    @include header;
+  }
+
+  &__name {
+    @include header;
+  }
+
+  &__description {
+    font-size: 1.5rem;
+  }
+}

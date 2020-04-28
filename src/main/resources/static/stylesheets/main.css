@@ -59,8 +59,10 @@ body {
 }
 
 .container {
+  margin-left: 8rem;
+  margin-right: 8rem;
+  margin: auto;
   max-width: 120rem;
-  margin: 8rem auto;
   background-color: var(--color-grey-light-2);
   box-shadow: var(--shadow-dark);
   min-height: 50rem;
@@ -89,7 +91,6 @@ body {
 }
 
 .coffeehouse-view {
-  height: 77rem;
   flex: 1;
 }
 
@@ -408,6 +409,25 @@ body {
 
 .filter-search {
   filter: invert(58%) sepia(53%) saturate(437%) hue-rotate(329deg) brightness(110%) contrast(99%);
+}
+
+.coffee {
+  margin-bottom: 20px;
+}
+.coffee__list {
+  padding-left: 3em;
+  padding-right: 3em;
+}
+.coffee__title {
+  color: var(--color-sunset-1);
+  text-transform: uppercase;
+}
+.coffee__name {
+  color: var(--color-sunset-1);
+  text-transform: uppercase;
+}
+.coffee__description {
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

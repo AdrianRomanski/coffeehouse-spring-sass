@@ -1,12 +1,13 @@
 package adrianromanski.coffeehouse.controllers;
 
-import adrianromanski.coffeehouse.domain.drink.Coffee;
-import adrianromanski.coffeehouse.repositories.CoffeeRepository;
-import org.aspectj.lang.annotation.Before;
+import adrianromanski.coffeehouse.model.drink.CoffeeDTO;
+import adrianromanski.coffeehouse.service.CoffeeService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
@@ -15,41 +16,38 @@ import java.util.List;
 
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+@ExtendWith(MockitoExtension.class)
 class CoffeeControllerTest {
 
-    CoffeeController coffeeController;
-
     @Mock
-    CoffeeRepository coffeeRepository;
+    CoffeeService coffeeService;
+
+    @InjectMocks
+    CoffeeController coffeeController;
 
     MockMvc mockMvc;
 
 
     @BeforeEach
     public void setUp() throws Exception {
-        MockitoAnnotations.initMocks(this);
-
-        coffeeController = new CoffeeController(coffeeRepository);
-
         mockMvc = MockMvcBuilders.standaloneSetup(coffeeController).build();
     }
 
     @Test
     void index() throws Exception {
         // Given
-        List<Coffee> coffees = Arrays.asList(new Coffee(), new Coffee(), new Coffee());
+        List<CoffeeDTO> coffees = Arrays.asList(new CoffeeDTO(), new CoffeeDTO(), new CoffeeDTO());
 
-        when(coffeeRepository.findAll()).thenReturn(coffees);
+        when(coffeeService.findAll()).thenReturn(coffees);
 
         mockMvc.perform(get("/coffees"))
                 .andExpect(status().isOk())
-                .andExpect(view().name("coffeesList"))
+                .andExpect(view().name("coffeeList"))
                 .andExpect(model().attributeExists("coffeeList"));
 
-        verify(coffeeRepository, times(1)).findAll();
+        verify(coffeeService, times(1)).findAll();
 
 
     }

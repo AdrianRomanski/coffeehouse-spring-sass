@@ -1,16 +1,23 @@
 package adrianromanski.coffeehouse.domain.drink;
 
-import adrianromanski.coffeehouse.domain.drink.enums.CoffeeSize;
+import adrianromanski.coffeehouse.domain.BaseEntity;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.Lob;
 
 @Entity
 @Data
 @NoArgsConstructor
-public class Coffee extends Drink {
-
-    private boolean takeAway;
-
+@AllArgsConstructor
+@Builder
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Coffee extends BaseEntity {
+    private String name;
+    @Lob
+    private String description;
 }
