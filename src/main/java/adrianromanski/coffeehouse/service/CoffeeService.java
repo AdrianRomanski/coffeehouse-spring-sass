@@ -17,7 +17,9 @@ public class CoffeeService {
    private final CoffeeMapper coffeeMapper;
 
    public List<CoffeeDTO> findAll() {
-      return coffeeRepository.findAll().stream().map(coffeeMapper::coffeeToCoffeeDTO).collect(Collectors.toList());
+      return coffeeRepository.findAll()
+              .stream()
+              .map(coffeeMapper::coffeeToCoffeeDTO)
+              .collect(Collectors.toList());
    }
-
 }

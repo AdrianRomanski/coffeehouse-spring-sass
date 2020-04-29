@@ -5,10 +5,13 @@ import adrianromanski.coffeehouse.domain.drink.Coffee;
 import adrianromanski.coffeehouse.repositories.CoffeeRepository;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Profile;
+import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
@@ -19,7 +22,7 @@ import java.util.List;
 @Component
 @Profile(AppProfiles.DEV)
 @Slf4j
-public class InMemCoffeeBootstrap implements CommandLineRunner {
+public class InMemCoffeeBootstrap implements ApplicationListener<ContextRefreshedEvent> {
 
     private final CoffeeRepository coffeeRepository;
     private final Resource coffeesResource;
@@ -34,11 +37,13 @@ public class InMemCoffeeBootstrap implements CommandLineRunner {
         this.objectMapper = objectMapper;
     }
 
+    @SneakyThrows
     @Override
-    public void run(String... args) throws Exception {
+    public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
         log.info("Coffees saved!");
         saveCoffees();
     }
+
 
     private void saveCoffees() throws IOException {
         List<? extends Coffee> coffees2 = readCoffees();
@@ -52,4 +57,5 @@ public class InMemCoffeeBootstrap implements CommandLineRunner {
             });
         }
     }
+
 }
